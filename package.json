@@ -1,0 +1,11 @@
+{
+  "name": "micro-frontends-project",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "scheduler": "^0.27.0"
+  }
+}
