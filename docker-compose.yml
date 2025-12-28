@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  public-app:
+    build: ./apps/host-app
+    container_name: host-app
+    restart: always
+
+  admin-app:
+    build: ./apps/admin-app
+    container_name: admin-app
+    restart: always
+
+  seller-app:
+    build: ./apps/seller-app
+    container_name: seller-app
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - host-app
+      - admin-app
+      - seller-app

@@ -1,5 +1,9 @@
-// import 'packages-shared-ui/src/globals.css'; // MUST be at the top
-import 'packages-shared-ui/global.css';
+// import 'packages-shared-ui/global.css';
+// 
+ import '@repo/shared-styles/globals.css'
+// import './global.css'
+
+
 import React from 'react';
 
 export const metadata = {

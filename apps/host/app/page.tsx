@@ -4,7 +4,7 @@ export default function HomePage() {
       <h1>Main Shell (Host)</h1>
       <p>The host is running. Use the links below to access Micro Frontends:</p>
       <ul>
-        <li><a className="bg-red" href="/login">Login (Auth MFE)</a></li>
+        <li><a className="bg-red" href="/auth/login">Login (Auth MFE)</a></li>
         <li><a href="/search">Search (Search MFE)</a></li>
       </ul>
     </div>

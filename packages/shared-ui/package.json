@@ -5,8 +5,7 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "exports": {
-    ".": "./index.ts",
-    "./global.css": "./src/globals.css"
+    ".": "./index.ts"
   },
   "peerDependencies": {
     "react": "^19.2.1",

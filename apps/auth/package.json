@@ -12,7 +12,9 @@
     "next": "^16.0.8",
     "packages-shared-ui": "*",
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+     "@repo/shared-styles": "*"
+    
   },
   "devDependencies": {
     "autoprefixer": "^10.4.23",

@@ -1,0 +1,164 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* CRITICAL: Tell Tailwind to scan your shared-ui folder for classes */
+/* Use a path relative to THIS css file */
+
+
+@import "tailwindcss";
+
+@source "./**/*.{ts,tsx}";
+@source "../../apps/**/*.{ts,tsx,js,jsx}";
+@source "../../packages/**/*.{ts,tsx,js,jsx}";
+
+@source "../../packages/shared-ui/**/*.{ts,tsx}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-destructive: var(--destructive);
+
+  --color-border-c: var(--border-c);   
+
+  /* --border-border: var(--border); */
+  --ring-ring: var(--ring);
+
+  /* Added theme colors */
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  --color-warning: var(--warning);
+  --color-black: var(--black);
+  --color-emphasize: var(--emphasize);
+  --color-dark: var(--dark-color);
+  --color-platinum: var(--platinum);
+  --color-light: var(--light-color);
+
+
+}
+
+
+/* Light Mode Variables */
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  --card: #f5f5f5;
+  --primary: #f06543;
+  --secondary: #F6F6F6;
+  --accent: #3A9BA5;
+  /* --muted: #e5e7eb; */
+  --muted: #6B7280;
+  --destructive: #dc2626;
+  --border-c: #e5e7eb;
+  --ring: #3b82f6;
+
+    /* Custom colors */
+  --success: #38C976;
+  --error: #EF4444;
+  --info: #3B82F6;
+  --warning: #FACC15;
+  --black: #4D4D4D;
+  --emphasize: #00D1FF;
+  --dark-color: #2B1A58;
+  --platinum: #F6F6F6;
+  --light-color: #F9F9FB;
+
+}
+
+/* Dark Mode Variables */
+
+.dark {
+  --background: #1e293b;
+ 
+  /* --foreground: #f8fafc; */
+  --foreground: #e2e8f0;
+ 
+  --card: #334155;
+  --primary: #f06543;
+  --secondary: #333c4c;
+  --accent: #57C0C9;
+  --muted: #94A3B8;
+  --destructive: #ef4444;
+  --border-c: #3333;
+  --ring: #2563eb;
+
+    /* Dark mode versions */
+  --success: #2fa868;
+  --error: #f87171;
+  --info: #60a5fa;
+  --warning: #facc15;
+  --black: #e2e2e2;
+  --emphasize: #33e0ff;
+  --dark-color: #150e2c;
+  --platinum: #d5d5d5;
+  --light-color: #2f3a4b;
+
+}
+
+
+/* Base Styles */
+/* Smooth transitions for background & text colors */
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+
+
+/* Beautiful Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;              /* Firefox */
+  scrollbar-color: #a3a3a3 #f1f1f1;   /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 10px;
+  transition: background 0.2s ease-in-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8a8a8a;
+}
+
+/* Dark Mode */
+.dark .custom-scrollbar {
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
